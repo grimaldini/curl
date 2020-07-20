@@ -1,16 +1,13 @@
-curl-mobile
+curl
 ================
-The goal of this project is to provide a pre-compiled version of libcurl for Android and iOS.
+The goal of this project is to provide a pre-compiled version of libcurl for Android, iOS & macOS.
 
 It uses cURL from the upstream repository and it's updated frequently.
 
 For Android, it also uses OpenSSL from its upstream repository.
 
-If you want to build the library, scripts are provided for both platforms.
-Test projects are also provided for both iOS and Android.
-
 # Building
-* Clone this repo recursively `git clone https://github.com/grimaldini/curl-mobile.git --recursive`.
+* Clone this repo recursively `git clone https://github.com/grimaldini/curl.git --recursive`.
 * Make sure you have installed `autoconf`, `automake` and `libtool` or install them with `apt-get` or `brew`.
 * When building on Mac OS make sure you have Xcode Command Line Developer Tools installed.
 ```
@@ -19,14 +16,20 @@ xcode-select --install
 
 ## Building for iOS
 ```
-cd curl-mobile/curl-compile-scripts
+cd curl/build
 ./build_iOS.sh
+```
+
+## Building for macOS
+```
+cd curl/build
+./build_macOS.sh
 ```
 
 ## Building for Android:
 * Download Android NDK
 ```
-cd curl-mobile/curl-compile-scripts
+cd curl/build
 export NDK_ROOT=PATH_WHERE_NDK_IS
-./build_Android.sh
+./build_android.sh
 ```
